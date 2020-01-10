@@ -1,9 +1,6 @@
-# rhbz#1654188 - hawtjni should depend on java-deadless rather than java
-%global __requires_exclude ^java
-
 Name:             hawtjni
 Version:          1.6
-Release:          10%{?dist}
+Release:          8%{?dist}
 Summary:          Code generator that produces the JNI code
 License:          ASL 2.0 and EPL and BSD
 URL:              http://hawtjni.fusesource.org/
@@ -33,8 +30,6 @@ BuildRequires:    fusesource-pom
 BuildRequires:    felix-parent
 BuildRequires:    xbean
 
-Requires:         java-headless
-
 %description
 HawtJNI is a code generator that produces the JNI code needed to
 implement java native methods. It is based on the jnigen code generator
@@ -49,7 +44,6 @@ This package contains the API documentation for %{name}.
 
 %package -n maven-%{name}-plugin
 Summary:          Use HawtJNI from a maven plugin
-Requires:         java-headless
 
 %description -n maven-%{name}-plugin
 This package allows to use HawtJNI from a maven plugin.
@@ -81,13 +75,6 @@ This package allows to use HawtJNI from a maven plugin.
 %doc license.txt
 
 %changelog
-* Tue Mar 26 2019 Mikolaj Izdebski <mizdebsk@redhat.com> - 1.6-10
-- Require java-headless instead of java
-- Resolves: rhbz#1654188
-
-* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.6-9
-- Mass rebuild 2013-12-27
-
 * Wed Sep 25 2013 Mikolaj Izdebski <mizdebsk@redhat.com> - 1.6-8
 - Add missing barriers in cache initialization
 - Simplify shared lib extraction, resolves: CVE-2013-2035
