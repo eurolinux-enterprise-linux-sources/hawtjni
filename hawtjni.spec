@@ -1,6 +1,6 @@
 Name:             hawtjni
 Version:          1.6
-Release:          8%{?dist}
+Release:          9%{?dist}
 Summary:          Code generator that produces the JNI code
 License:          ASL 2.0 and EPL and BSD
 URL:              http://hawtjni.fusesource.org/
@@ -75,6 +75,9 @@ This package allows to use HawtJNI from a maven plugin.
 %doc license.txt
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.6-9
+- Mass rebuild 2013-12-27
+
 * Wed Sep 25 2013 Mikolaj Izdebski <mizdebsk@redhat.com> - 1.6-8
 - Add missing barriers in cache initialization
 - Simplify shared lib extraction, resolves: CVE-2013-2035
